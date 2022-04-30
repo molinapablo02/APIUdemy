@@ -1,0 +1,50 @@
+[
+  {
+    "line": 3,
+    "elements": [
+      {
+        "start_timestamp": "2022-04-29T18:55:51.826Z",
+        "line": 6,
+        "name": "Prueba GET al endpoint",
+        "description": "",
+        "id": "ejemplo-de-request;prueba-get-al-endpoint",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 2889553000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "I sent a GET request to the endpoint",
+            "match": {
+              "location": "Steps.APISteps.sendGETRequest()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 8,
+            "name": "I get a list of 10 users",
+            "match": {},
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@API"
+          }
+        ]
+      }
+    ],
+    "name": "Ejemplo de request",
+    "description": "",
+    "id": "ejemplo-de-request",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/APITest.feature",
+    "tags": []
+  }
+]

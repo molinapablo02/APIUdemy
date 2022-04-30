@@ -4,7 +4,7 @@ import static io.restassured.RestAssured.given;
 
 import java.util.Base64;
 
-import io.cucumber.java.en.When;
+
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 
@@ -15,8 +15,8 @@ public class PruebaAPI {
         given()
         .baseUri("https://api.github.com")
         .when()
-        .get("/users")
-        .getBody();
+        .get("/users/TheFreeRangeTester/repos")
+        .getBody().toString();
     }
 
     public void PostRequest(){
@@ -71,9 +71,15 @@ public class PruebaAPI {
     public static String password = "";
     public static String grantType = "";
     public static String accessToken = "";
+
+    //encriptamos nuestros datos 
+
     public static String encode(String str1, String str2){
         return new String(Base64.getEncoder().encode((str1+ ":" + str2).getBytes()));
     }
+
+
+    //lo mandamos 
 
     public static Response getCode(){
         String authorization = encode(userName, password);
@@ -100,6 +106,8 @@ public class PruebaAPI {
         return response.jsonPath().getString("code");
     }
 
+    //obtenemos el token "completo"
+
     public static Response getToken(String authCode){
         String authorization = encode(userName, password);
 
@@ -117,10 +125,14 @@ public class PruebaAPI {
                 .response();
 
     }
+    
+    //obtenemos el token "puro" 
 
     public static String parseForToken(Response logiResponse){
         return logiResponse.jsonPath().getString("access_token");
     }
+
+    //accedeos al servicio
 
     public static void getFinalService(){
 
