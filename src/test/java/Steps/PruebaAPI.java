@@ -79,8 +79,8 @@ public class PruebaAPI {
     }
 
 
-    //lo mandamos 
-
+    //lo mandamos a
+     int cont = 1;
     public static Response getCode(){
         String authorization = encode(userName, password);
 

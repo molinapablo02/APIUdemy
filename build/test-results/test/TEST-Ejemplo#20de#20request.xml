@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Ejemplo de request" tests="1" skipped="0" failures="1" errors="0" timestamp="2022-05-08T19:54:54" hostname="DESKTOP-SNHNI7P" time="1.79">
+  <properties/>
+  <testcase name="Validar la cantidad de entradas en la respuesta" classname="Ejemplo de request" time="1.79">
+    <failure message="io.cucumber.junit.UndefinedStepException: The step 'I validate there are 10 items on the /users endpoint' is undefined.&#10;You can implement this step using the snippet(s) below:&#10;&#10;@Then(&quot;I validate there are {int} items on the \\/users endpoint&quot;)&#10;public void i_validate_there_are_items_on_the_users_endpoint(Integer int1) {&#10;    // Write code here that turns the phrase above into concrete actions&#10;    throw new io.cucumber.java.PendingException();&#10;}&#10;" type="io.cucumber.junit.UndefinedStepException">io.cucumber.junit.UndefinedStepException: The step 'I validate there are 10 items on the /users endpoint' is undefined.
+You can implement this step using the snippet(s) below:
+
+@Then(&quot;I validate there are {int} items on the \\/users endpoint&quot;)
+public void i_validate_there_are_items_on_the_users_endpoint(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+</failure>
+  </testcase>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

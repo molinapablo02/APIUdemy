@@ -3,23 +3,29 @@
     "line": 3,
     "elements": [
       {
-        "start_timestamp": "2022-04-29T18:55:51.826Z",
-        "line": 6,
-        "name": "Prueba GET al endpoint",
+        "start_timestamp": "2022-05-08T19:54:54.671Z",
+        "line": 11,
+        "name": "Validar la cantidad de entradas en la respuesta",
         "description": "",
-        "id": "ejemplo-de-request;prueba-get-al-endpoint",
+        "id": "ejemplo-de-request;validar-la-cantidad-de-entradas-en-la-respuesta",
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 2889553000,
+              "duration": 1215102800,
               "status": "passed"
             },
-            "line": 7,
-            "name": "I sent a GET request to the endpoint",
+            "line": 12,
+            "name": "I sent a GET request to the https://jsonplaceholder.typecode.com URI",
             "match": {
-              "location": "Steps.APISteps.sendGETRequest()"
+              "arguments": [
+                {
+                  "val": "https://jsonplaceholder.typecode.com",
+                  "offset": 28
+                }
+              ],
+              "location": "Steps.APISteps.sendGETRequest(java.lang.String)"
             },
             "keyword": "Given "
           },
@@ -27,8 +33,8 @@
             "result": {
               "status": "undefined"
             },
-            "line": 8,
-            "name": "I get a list of 10 users",
+            "line": 13,
+            "name": "I validate there are 10 items on the /users endpoint",
             "match": {},
             "keyword": "Then "
           }
