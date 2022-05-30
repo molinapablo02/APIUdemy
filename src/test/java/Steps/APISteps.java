@@ -8,14 +8,11 @@ import io.restassured.response.ValidatableResponse;
 import io.restassured.specification.RequestSpecification;
 import static io.restassured.RestAssured.given;
 import static org.junit.Assert.assertEquals;
-
+import static org.junit.Assert.assertTrue;
 import java.util.List;
 
 
-
-
 public class APISteps {
-
 
 private static RequestSpecification request;
 private Response response;
@@ -35,7 +32,7 @@ private ValidatableResponse json;
 
  //(//d+) = valor int no hardcodeado
 
-    @Then("^I get a list of (//d+) users$")
+    @Then("^I get a list of (\\d+) users$")
     public void validateListOfUsers(int expectedStatusCode){
 
       response = request
@@ -48,7 +45,7 @@ private ValidatableResponse json;
 
 
     //getList("$") = que obtenga todas las entradas dentro de la respuesta json que estamos recibiendo
-    @Then("^I validate there are (//d+) items on the (.+) endpoint$")
+    @Then("^I validate there are {int} items on the \\/users endpoint$")
     public void validateSize(int expectedSize, String endpoint){
 
       response = request
@@ -59,8 +56,24 @@ private ValidatableResponse json;
                   int actualSize = jsonResponse.size();
                   assertEquals(expectedSize, actualSize);
 
-
-  
-
  } 
+
+ @Then("^I validate there is a value: (.+) in the response at (.+) endpoint$")
+ public void validateValue(String expectedValue, String endpoint){
+
+  response = request
+              .when()
+              .get(endpoint);
+
+
+              //como comparar el valor esperado con el primer valor que encuentre, poco practico 
+              List<String> jsonResponse = response.jsonPath().getList("username");
+              //String actualValue = jsonResponse.get(0);
+
+                          //primero el valor esperado, el valor original 
+              //assertEquals(expectedValue, actualValue);
+
+              assertTrue("el valor " +expectedValue+ "no fue encontrado en la lista", jsonResponse.contains(expectedValue));
+              
+            }
 }

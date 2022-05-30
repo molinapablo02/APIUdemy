@@ -1,27 +1,27 @@
 [
   {
-    "line": 3,
+    "line": 1,
     "elements": [
       {
-        "start_timestamp": "2022-05-08T19:54:54.671Z",
-        "line": 11,
-        "name": "Validar la cantidad de entradas en la respuesta",
+        "start_timestamp": "2022-05-30T17:32:17.020Z",
+        "line": 12,
+        "name": "Validar que un elemento esta en la respuesta",
         "description": "",
-        "id": "ejemplo-de-request;validar-la-cantidad-de-entradas-en-la-respuesta",
+        "id": "ejemplo-de-request;validar-que-un-elemento-esta-en-la-respuesta",
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 1215102800,
+              "duration": 2348273000,
               "status": "passed"
             },
-            "line": 12,
-            "name": "I sent a GET request to the https://jsonplaceholder.typecode.com URI",
+            "line": 13,
+            "name": "I sent a GET request to the https://jsonplaceholder.typicode.com URI",
             "match": {
               "arguments": [
                 {
-                  "val": "https://jsonplaceholder.typecode.com",
+                  "val": "https://jsonplaceholder.typicode.com",
                   "offset": 28
                 }
               ],
@@ -31,11 +31,25 @@
           },
           {
             "result": {
-              "status": "undefined"
+              "error_message": "org.junit.ComparisonFailure: expected:\u003cBre[]t\u003e but was:\u003cBre[n]t\u003e\n\tat org.junit.Assert.assertEquals(Assert.java:115)\n\tat org.junit.Assert.assertEquals(Assert.java:144)\n\tat Steps.APISteps.validateValue(APISteps.java:67)\n\tat ✽.I validate there is a value: Brent in the response at /users endpoint(file:///Users/usuariomac/Documents/APIUdemy/src/test/resources/features/APITest.feature:14)\n",
+              "duration": 3771258000,
+              "status": "failed"
             },
-            "line": 13,
-            "name": "I validate there are 10 items on the /users endpoint",
-            "match": {},
+            "line": 14,
+            "name": "I validate there is a value: Brent in the response at /users endpoint",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Brent",
+                  "offset": 29
+                },
+                {
+                  "val": "/users",
+                  "offset": 54
+                }
+              ],
+              "location": "Steps.APISteps.validateValue(java.lang.String,java.lang.String)"
+            },
             "keyword": "Then "
           }
         ],
