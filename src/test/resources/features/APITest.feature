@@ -1,3 +1,5 @@
+
+@API
 Feature: Ejemplo de request
 
     Scenario: Prueba GET al endpoint

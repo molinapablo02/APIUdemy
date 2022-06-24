@@ -22,10 +22,9 @@ public class BraveNewCoin {
         // endpoint que URI todo eso se va a imprimir.
 
         request = given()
-                .header("x-rapidapi-key", "VALOR")
-                .header("x-rapidapi-host", "VALOR")
-                .contentType(ContentType.JSON)
-                .baseUri(URI)
+                .header("x-rapidapi-key", "a1a2b4eb17msh6a7fed06a8297d5p16dae6jsna5e67b4f306c")
+                .header("x-rapidapi-host", "bravenewcoin.p.rapidapi.com")
+                .contentType(ContentType.JSON).baseUri(URI)
                 .log().all();
 
     }
