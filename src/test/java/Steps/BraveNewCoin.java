@@ -13,7 +13,7 @@ public class BraveNewCoin {
     private Response response;
     private ValidatableResponse json;
 
-    @Given("^I have a valid API key for the (.+) URI@")
+    @Given("^I have a valid API key for the (.+) URI$")
     public void iSetTheRequestParams(String URI) {
 
         // buscar el VALOR en la pc

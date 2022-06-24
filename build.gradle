@@ -18,13 +18,14 @@ testImplementation group: 'io.rest-assured', name: 'rest-assured', version: '5.1
 // https://mvnrepository.com/artifact/io.cucumber/cucumber-java
 implementation group: 'io.cucumber', name: 'cucumber-java', version: '7.3.3'
 testImplementation 'io.cucumber:cucumber-junit:7.3.3'
-// https://mvnrepository.com/artifact/tech.grasshopper/extentreports-cucumber6-adapter
-implementation group: 'tech.grasshopper', name: 'extentreports-cucumber6-adapter', version: '2.12.0'
-/*
-// https://mvnrepository.com/artifact/tech.grasshopper/extentreports-cucumber7-adapter
-implementation group: 'tech.grasshopper', name: 'extentreports-cucumber7-adapter', version: '1.6.0'
 
-*/
+//https://mvnrepository.com/artifact/tech.grasshopper/extentreports-cucumber6-adapter
+//implementation group: 'tech.grasshopper', name: 'extentreports-cucumber6-adapter', version: '2.12.0'
+
+// https://mvnrepository.com/artifact/tech.grasshopper/extentreports-cucumber7-adapter
+implementation group: 'tech.grasshopper', name: 'extentreports-cucumber7-adapter', version: '1.7.0'
+
+
 testImplementation 'io.rest-assured:rest-assured:5.1.1'
 // https://mvnrepository.com/artifact/org.json/json
 implementation group: 'org.json', name: 'json', version: '20220320'
